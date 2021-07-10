@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="area">
+        <fomr>
+					<input type="text" placeholder="Insert your name" id="n1"> <!-- we need to get get data fisrt -->
+					<input type="text" placeholder="Enter your age" id="n2"> 
+					<input type="text" placeholder="Enter your weight" id="n3"> 	<!-- Well, now others data-->
+					<input type="text" placeholder="Enter your height" id="n4">
+          <input type="button" placeholder="Calculate" id="btn_calc" onclick="cal()">
+				</fomr>
+    </div>
+    <script>
+      function cal(){
+      //get input values
+      
+        var number_one = window.document.getElementById('n1').value
+        
+        var number_two = window.document.getElementById('n2').value
+        
+        var number_three = window.document.getElementById('n3').value
+        
+        var number_four = window.document.getElementById('n4').value
+        
+       var calcu = n3/(n4**2)
+       
+       alert(`Hello ${n1}, your imc is ${calcu} for your age of ${n2}. Care you!!!`)
+       
+      }
+    </script>
+</body>
+</html>
