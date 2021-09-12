@@ -2,38 +2,572 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <title>Document</title>
+    <link href="https://fontawesome.com/icons/ad?style=solid" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/e977a98377.js" crossorigin="anonymous"></script>
+    <title>Índice de Massa Corporal</title>
 </head>
 <body>
+
+
+	<!--Color in CSS-->
+	<!--Red: #ff0000;
+		yellow: #ffff00;
+		orange: #ffa500;
+		 
+	-->
+
+    <style>
+        @font-face{
+	font-family: Dosis;
+	src: url(../Fonts/Dosis/Dosis-ExtraLight.ttf);
+}
+
+body{
+	border: 0;
+	padding: 0;
+	margin: 0;
+	font-family: Dosis;
+}
+
+.cabecalho{
+	background-color: #8060ef;
+	text-align: center;
+	top: -20px;
+	position: relative;
+	color: #fff;
+	padding: 20px;
+  
+}
+
+.cabecalho h1{
+	font-family: Dosis;
+	color: rgb(255, 255,255);
+	position: relative;
+	top: 0px;
+	padding: 12px;
+	
+}
+
+.area{
+	position: relative;
+	background-color: #8060ef;
+	width: 450px;
+	text-align: center;
+	left: 350px;
+	padding: 60px;
+	border-radius: 50px;
+	color: #fff;
+}
+
+i#alert{
+	font-size: 50pt;
+}
+
+
+input[type="text"]#Resultado{
+
+	padding: 30px;
+	font-family: Dosis;
+	font-size: 15pt;
+	width: 150px;
+	text-align: center;
+	background-color: rgb(250, 250, 250);
+	border-radius: 14px;
+	color: #000;
+   
+}
+
+input{
+	position: relative;
+	border: 0;
+	outline: none;
+	border-radius: 14px;
+	font-family: Trebuchet Ms;
+	width: 200px;
+}
+
+button{
+	border: 0;
+	padding: 5px;
+	cursor: pointer;
+	background: none;
+	font-family: dosis;
+	color: #fff;
+	font-size: 14.5pt;
+	border-radius: 25px;
+	outline: none;
+}
+
+button:hover{
+	background-color: rgba(255, 255, 255, 0.555);
+	color: #000;
+}
+.rodape{
+	text-align: center;
+	position: relative;
+	top: 110px;
+	padding: 60px;
+	background-color: #8060ef;
+	color: #fff;
+	font-size: 15pt;
+}
+
+
+
+th{
+	width: 100px;
+	border: 0;
+}
+
+td{
+	width: 190px;
+	border: #8060ef solid 1px;
+	background-color: rgb(255, 255, 255);
+	color: rgb(0, 0, 0);
+}
+
+th{
+	text-align: center;
+}
+
+table{
+	position: relative;
+	left: 450px;
+	top: 30px;
+	text-align: center;
+}
+
+#resetar:hover{
+	background: rgba(255, 0, 0, 0.795);
+}
+
+
+
+
+@media screen and (min-width: 100px) and (max-width: 999px){
+
+	.cabecalho{
+		position: relative;
+		top: -20px;
+		background-color: rgba(255, 255, 255, 0.555);
+		color: #000;
+		padding: 30px;
+		width: 410px;
+		
+
+	}
+
+	.cabecalho h1{
+		position: relative;
+		top: 12px;
+	}
+	body{
+		background-color: #8060ef;
+		font-family: Dosis;
+		border: 0;
+		padding: 0;
+		margin: 0;
+	}
+
+	.dados{
+		border-bottom: #fff solid 3px;
+		border-radius: 5px;
+	}
+
+	.area{
+		background-color: rgba(255, 255, 255, 0.555);
+		left: 55px;
+		width: 250px;
+		padding: 60px;
+	}
+
+	
+
+	input{
+		left: 1px;
+		padding: 3px;
+		margin: 5px;
+		
+	}
+
+	.dados input:focus{
+		transition: 1s;
+		width: 250px;
+		border: 1px solid #8060ef;
+	}
+
+	input[type="text"]#Resultado{
+		background-color: #8060ef;
+		left: 0px;
+		font-size: 10pt;
+		color: #fff;
+		
+	}
+
+	.rodape p{
+		color: #000;
+	}
+
+	.rodape{
+		background-color: rgba(255, 255, 255, 0.568);
+	}
+
+	table{
+		position: relative;
+		left: 50px;
+	  border: 0;
+	  background-color: rgba(0, 0, 0, 0.438);
+	  color: #fff;
+	}
+
+	td{
+		background-color: rgba(0, 0, 0, 0.432);
+		color: #fff;
+	}
+
+	footer{
+		position: relative;
+		padding: 10px;
+		width: 350px;
+	}
+
+
+	div#sweet{
+		position: absolute;
+		left: 53px;
+		display: none;
+		background-color: #fff;
+		color: #000;
+	}
+
+	.icon-media i{
+		background-color: #8060ef;
+		border: #8060ef;
+	}
+
+	
+
+
+
+	i#alert{
+		font-size: 40pt;
+		padding: 10px;
+		color: rgb(147, 255, 47);
+		animation: is-rotating 1s;
+		width: 150px;
+		position: relative;
+		text-align: center;
+		left: 80px;
+	
+	}
+
+	@keyframes is-rotating {
+  to {
+    transform: rotate(1turn);
+	transition: 1s;
+  }
+}
+
+
+   
+}
+
+
+#sweet{
+	position: absolute;
+	top: 150px;
+	left: -50%;
+	background-color: #000;
+	color: #fff;
+	padding: 10px;
+	text-align: center;
+	height: 380px;
+	width: 350px;
+	background-attachment: fixed;
+	border-radius: 24px;
+	transition: 1s all ease-in-out;
+	display: block;
+}
+
+#sweet:hover{
+	background-color: #fff;
+	color: #000;
+}
+
+#sweet button{
+	background-color: #8060ef;
+}
+
+#comentario{
+	position: relative;
+   font-size: 25pt;
+   top: 10px;
+}
+
+img{
+	position: relative;
+	width: 100px;
+	top: 10px;
+}
+
+#close{
+	position: absolute;
+	width: 50px;
+	left: 300px;
+	cursor: pointer;
+}
+
+
+.rodape i {
+	color: #fff;
+	margin: 5px;
+	padding: 10px;
+	border-radius: 100%;
+	border: 1px solid #fff;
+	font-size: 15pt;
+	transition: 1.5s;
+}
+
+.rodape i:hover{
+	background-color: #fff;
+	border-color: #8060ef;
+	color: #8060ef;
+	border-radius: 0;
+	transform: rotate(360deg);
+	border-top: 1px solid #8060ef;
+	border-bottom: 1px solid #8060ef;
+	border-radius: 10px 10px 10px 10px;
+	font-size: 17pt;
+}
+
+
+
+
+
+/*Formatação Loading EFEITO === CSS PURO ====*/
+
+
+#close{
+	color: red;
+	font-size: 35pt;
+	padding: 5px;
+	background-color: #fff;
+	border-radius: 100%;
+	box-shadow: 1px 1px 4px #fff;
+}
+
+#close:hover{
+	color: #000;
+	background-color: red;
+}
+
+
+
+
+
+
+    </style>
+    <header class="cabecalho">
+        
+       <h1>ÍMC</h1>
+    </header>
     <div class="area">
-        <form>
-	<input type="text" placeholder="Insert your name" id="n1"> <!-- we need to get get data fisrt -->
-	<input type="text" placeholder="Enter your age" id="n2"> 
-	<input type="text" placeholder="Enter your weight" id="n3"> 	<!-- Well, now others data-->
-	<input type="text" placeholder="Enter your height" id="n4">
-         <input type="button" placeholder="Calculate" id="btn_calc" onclick="cal()">
-	</form>
+        <form action="" method="POST">
+            <div class="dados">
+            <p>
+                Seu Nome
+                <input type="text" name="cNome" id="Nome">  
+            </p>
+            <p>
+                Sua Idade
+                <input type="number" name="cIdade" id="Idade">
+            </p> <br>
+        </div>
+            <p>
+                Indique o seu peso
+                <input type="text" id="Peso"> Kg
+            </p> 
+            <p>
+                Indique a sua altura
+                <input type="text" id="Altura">Mts
+                
+            </p>
+            <button type="button" onclick="calcular_valueof()" id="calcu"><legend>Calcular</legend></button>
+			<button type="reset" id="resetar"><legend>Cancelar</legend></button>
+        </form> <br>
+
+        <input type="text" id="Resultado" value="RESULTADO" readonly disabled title="Valida -se apenas os dois primeiros valores">
     </div>
-    <script>
-      function cal(){
-      //get input values
-      
-        var number_one = window.document.getElementById('n1').value
-        
-        var number_two = window.document.getElementById('n2').value
-        
-        var number_three = window.document.getElementById('n3').value
-        
-        var number_four = window.document.getElementById('n4').value
-        
-       var calcu = n3/(n4**2)
-       
-       alert(`Hello ${n1}, your imc is ${calcu} for your age of ${n2}. Care you!!!`)
-       
-      }
-    </script>
+    <div id="sweet">
+		<i class="fas fa-times" id="close" onclick="close_up()"></i>
+		<h1>Você Está...</h1>
+		<i class="fas fa-bullhorn" id="alert"></i>
+           <p id="comentario">404</p>
+    </div>
+    <div class="tabela">
+       <table>
+       <tr>
+           <th>Tabela IMC</th>
+           <th>Classificação</th>
+       </tr>
+           <tr>
+            <td>Menor que 18.5</td>
+            <td>Abaixo do Peso</td>
+           </tr>
+           <tr>
+               <td>Entre 18.5 e 24.9</td>
+               <td>Peso Normal</td>
+           </tr>
+           <tr>
+               <td>Entre 25.0 e 29.9</td>
+               <td>Pré-obesidade</td>
+           </tr>
+           <tr>
+               <td>Entre 30.0 e 34.9</td>
+               <td>Obesidade Grau 1</td>
+           </tr>
+           <tr>
+               <td>Entre 35.0 e 39.9</td>
+               <td>Obesidade Grau 2</td>
+           </tr>
+           <tr>
+               <td>Acima de 40.0</td>
+               <td>Obesidade Grau 3</td>
+           </tr>
+       </table>
+    </div>
+
+  
+
+    <footer class="rodape">
+        <p>Tecnologias Star's&copy;2021</p>
+        <div class="icon-media">
+			<a href="https://www.facebook.com/" target="_black"><i class="fab fa-facebook" id="face"></i></a>
+			<a href="https://www.instagram.com/" target="_black"><i class="fab fa-instagram" id="insta"></i></a>
+			<a href="https://www.linkedin.com/in/renan-pereira-da-silva-50093a1b1/"><i class="fab fa-linkedin-in" id="link"></i></a>
+			<a href="#"><i class="fab fa-youtube" id="tube"></i></a>
+        </div>
+    </footer>
+      <script>
+		  /* <!--Color in CSS-->
+	<!--Red: #ff0000;
+		yellow: #ffff00;
+		orange: #ffa500;
+		 
+	-->
+*/
+
+function calcular_valueof(){
+	var nome = window.document.getElementById('Nome').value
+
+	var idade = window.document.getElementById('Idade').value
+
+	var n1 = Number.parseFloat(window.document.getElementById('Peso').value)
+
+	var n2 = Number.parseFloat(window.document.getElementById('Altura').value)
+
+	var mostrar = n1/(n2**2)
+
+	window.document.getElementById('Resultado').value = mostrar 
+	if(mostrar < 18.5){
+
+window.document.getElementById('comentario').innerText = `${nome}, sua idade é ${idade}, mas você está abaixo do peso, se cuide!`
+
+window.document.getElementById('sweet').style.left = '36.5%'
+
+window.document.getElementById('alert').style.display = "block"
+
+window.document.getElementById('alert').style.color = "#ffff00"
+
+}
+
+if(mostrar >= 18.5 && mostrar <= 24.9){
+window.document.getElementById('comentario').innerText = `${nome}, sua idade é ${idade}, você está no peso normal, parabéns`
+window.document.getElementById('sweet').style.display = "block"
+
+window.document.getElementById('alert').style.display = "block"
+
+window.document.getElementById('alert').style.color = "#0dff0d"
+
+}
+
+if(mostrar >= 25.0 && mostrar <= 29.9){
+window.document.getElementById('comentario').innerText = `${nome}, sua idade é ${idade},você está em pré obesidade, deveria ser cuidar mais`
+window.document.getElementById('sweet').style.display = "block"
+
+window.document.getElementById('alert').style.display = "block"
+
+window.document.getElementById('alert').style.color = "#ffff00"
+
+}
+
+if(mostrar >=	30.0 && mostrar <= 34.9){
+window.document.getElementById('comentario').innerText = `${nome}, sua idade é ${idade}, você está em um nível de obesidade 1, se cuide mais!`
+window.document.getElementById('sweet').style.display = "block"
+
+window.document.getElementById('alert').style.display = "block"
+
+window.document.getElementById('alert').style.color = "#ffa500"
+}
+
+if(mostrar >= 35.0 && mostrar <= 39.9){
+window.document.getElementById('comentario').innerText = `${nome}, sua idade é ${idade}, você está em um nível de obesidade 2, se cuide mais!`
+window.document.getElementById('sweet').style.display = "block"
+
+window.document.getElementById('alert').style.display = "block"
+
+window.document.getElementById('alert').style.color = "#ffa500"
+}
+
+if(mostrar > 40.0){
+window.document.getElementById('comentario').innerText = `${nome}, sua idade é ${idade}, você está em um nível de obesidade 3, se cuide mais!`
+window.document.getElementById('sweet').style.display = "block"
+
+
+window.document.getElementById('alert').style.display = "block"
+
+window.document.getElementById('alert').style.color = "#ff0000"
+
+}
+
+
+
+}
+
+
+function close_up(){
+	window.document.getElementById('sweet').style.left = '-50%'
+}
+
+//validação
+
+
+
+var n1 = window.document.getElementById('Peso')
+
+n1.oninput = function(){
+
+	var campo_peso = n1.value
+	if(campo_peso.length == 3){
+		n1.value += "." + "0"
+	}
+
+}
+
+var n2 = window.document.getElementById('Altura')
+
+n2.oninput = function(){
+
+	var campo_altura = n2.value
+	if(campo_altura.length == 1){
+		n2.value += "."
+	}
+
+   
+}
+
+</script>
+
 </body>
 </html>
