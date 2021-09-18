@@ -141,6 +141,7 @@ table{
 	.cabecalho h1{
 		position: relative;
 		top: 12px;
+		backdrop-filter: blur(12px);
 	}
 	body{
 		background-color: #8060ef;
