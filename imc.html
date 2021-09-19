@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fontawesome.com/icons/ad?style=solid" rel="stylesheet">
     <script src="https://kit.fontawesome.com/e977a98377.js" crossorigin="anonymous"></script>
-     <link rel="stylesheet" type="text/css" href="estilo.css">
-    <link rel="icon" href="Icone.png">
+    <link rel="stylesheet" type="text/css" href="estilo.css">
     <title>Índice de Massa Corporal</title>
 </head>
 <body>
@@ -97,6 +96,7 @@
 			<a href="https://www.facebook.com/" target="_black"><i class="fab fa-facebook" id="face"></i></a>
 			<a href="https://www.instagram.com/" target="_black"><i class="fab fa-instagram" id="insta"></i></a>
 			<a href="https://www.linkedin.com/in/renan-pereira-da-silva-50093a1b1/"><i class="fab fa-linkedin-in" id="link"></i></a>
+			<a href="https://www.github.com"><i class="fab fa-github" id="git"></i></a>
 			<a href="#"><i class="fab fa-youtube" id="tube"></i></a>
         </div>
     </footer>
@@ -217,6 +217,15 @@ n2.oninput = function(){
 
    
 }
+
+//Agora, vamos criar um estilo separado para o nosso cabeçaçho, no qual ele terá uma cor e transparência
+
+	window.addEventListener("scroll", function(){
+	var ca = window.document.querySelector('header')
+	ca.classList.toggle("stick", window.scrollY > 50)
+	
+		
+})
 
 </script>
 
