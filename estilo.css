@@ -1,4 +1,4 @@
- @font-face{
+@font-face{
 	font-family: Dosis;
 	src: url(../Fonts/Dosis/Dosis-ExtraLight.ttf);
 }
@@ -14,9 +14,12 @@ body{
 	background-color: #8060ef;
 	text-align: center;
 	top: -20px;
-	position: relative;
+	position: fixed;
+	width: 100%;
+	z-index: 1;
 	color: #fff;
 	padding: 20px;
+	transition: 0.6s all ease-in-out;
   
 }
 
@@ -32,6 +35,7 @@ body{
 .area{
 	position: relative;
 	background-color: #8060ef;
+	top: 150px;
 	width: 450px;
 	text-align: center;
 	left: 350px;
@@ -86,7 +90,7 @@ button:hover{
 .rodape{
 	text-align: center;
 	position: relative;
-	top: 110px;
+	top: 200px;
 	padding: 60px;
 	background-color: #8060ef;
 	color: #fff;
@@ -114,7 +118,7 @@ th{
 table{
 	position: relative;
 	left: 450px;
-	top: 30px;
+	top: 190px;
 	text-align: center;
 }
 
@@ -307,7 +311,7 @@ img{
 	border-radius: 100%;
 	border: 1px solid #fff;
 	font-size: 15pt;
-	transition: 1.5s;
+	transition: 0.6s all ease-in-out;
 }
 
 .rodape i:hover{
@@ -315,12 +319,43 @@ img{
 	border-color: #8060ef;
 	color: #8060ef;
 	border-radius: 0;
-	transform: rotate(360deg);
+	transform: rotate(60deg);
 	border-top: 1px solid #8060ef;
 	border-bottom: 1px solid #8060ef;
 	border-radius: 10px 10px 10px 10px;
 	font-size: 17pt;
 }
+
+i#face:hover{
+	background: #4dacff;
+	color: #fff;
+	box-shadow: 1px 1px 4px #000;
+}
+
+i#insta:hover{
+	background: linear-gradient(30deg, #5d00ba, #8060ef, #ff4d4d,  #ffdb3b);
+	color: #fff;
+	box-shadow: 1px 1px 4px #000;
+}
+
+i#link:hover{
+	background: #333dff;
+	color: #fff;
+	box-shadow: 1px 1px 4px #000;
+}
+
+i#git:hover{
+	background: #000;
+	color: #fff;
+	box-shadow: 1px 1px 4px #000;
+}
+
+i#tube:hover{
+	background: #ff3333;
+	color: #fff;
+	box-shadow: 1px 1px 4px #000;
+}
+
 
 
 
@@ -341,4 +376,11 @@ img{
 #close:hover{
 	color: #000;
 	background-color: red;
+}
+
+
+header.stick{
+	background-color: rgba(0,0,0,0.2);
+	top: -40px;
+	backdrop-filter: blur(15px);
 }
