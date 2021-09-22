@@ -6,6 +6,7 @@
     <link href="https://fontawesome.com/icons/ad?style=solid" rel="stylesheet">
     <script src="https://kit.fontawesome.com/e977a98377.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="estilo.css">
+    <link rel="icon" href="icone.png">
     <title>Índice de Massa Corporal</title>
 </head>
 <body>
@@ -91,7 +92,7 @@
   
 
     <footer class="rodape">
-	     <a href="#"><div id="top">
+       <a href="#"><div id="top">
             <p>Ir para o topo</p>
         </div></a> 
         <p>Tecnologias Star's&copy;2021</p>
@@ -126,7 +127,7 @@ function calcular_valueof(){
 	window.document.getElementById('Resultado').value = mostrar 
 	if(mostrar < 18.5){
 
-window.document.getElementById('comentario').innerText = `${nome}, você está abaixo do peso para a sua idade, na qual é ${idade}`
+window.document.getElementById('comentario').innerText = `${nome}, sua idade é ${idade}, mas você está abaixo do peso, se cuide!`
 
 window.document.getElementById('sweet').style.left = '36.5%'
 
@@ -138,9 +139,9 @@ window.document.getElementById('alert').style.color = "#ffff00"
 
 if(mostrar >= 18.5 && mostrar <= 24.9){
 window.document.getElementById('comentario').innerText = `${nome}, sua idade é ${idade}, você está no peso normal, parabéns`
-window.document.getElementById('sweet').style.display = "block"
+window.document.getElementById('sweet').style.left = '36.5%'
 
-window.document.getElementById('alert').style.left = '36.5%'
+window.document.getElementById('alert').style.display = "block"
 
 window.document.getElementById('alert').style.color = "#0dff0d"
 
@@ -148,9 +149,9 @@ window.document.getElementById('alert').style.color = "#0dff0d"
 
 if(mostrar >= 25.0 && mostrar <= 29.9){
 window.document.getElementById('comentario').innerText = `${nome}, sua idade é ${idade},você está em pré obesidade, deveria ser cuidar mais`
-window.document.getElementById('sweet').style.display = "block"
+window.document.getElementById('sweet').style.left = '36.5%'
 
-window.document.getElementById('alert').style.left = '36.5%'
+window.document.getElementById('alert').style.display = "block"
 
 window.document.getElementById('alert').style.color = "#ffff00"
 
@@ -158,28 +159,28 @@ window.document.getElementById('alert').style.color = "#ffff00"
 
 if(mostrar >=	30.0 && mostrar <= 34.9){
 window.document.getElementById('comentario').innerText = `${nome}, sua idade é ${idade}, você está em um nível de obesidade 1, se cuide mais!`
-window.document.getElementById('sweet').style.display = "block"
+window.document.getElementById('sweet').style.left = '36.5%'
 
-window.document.getElementById('alert').style.left = '36.5%'
+window.document.getElementById('alert').style.display = "block"
 
 window.document.getElementById('alert').style.color = "#ffa500"
 }
 
 if(mostrar >= 35.0 && mostrar <= 39.9){
 window.document.getElementById('comentario').innerText = `${nome}, sua idade é ${idade}, você está em um nível de obesidade 2, se cuide mais!`
-window.document.getElementById('sweet').style.display = "block"
+window.document.getElementById('sweet').style.left = '36.5%'
 
-window.document.getElementById('alert').style.left = '36.5%'
+window.document.getElementById('alert').style.display = "block"
 
 window.document.getElementById('alert').style.color = "#ffa500"
 }
 
 if(mostrar > 40.0){
 window.document.getElementById('comentario').innerText = `${nome}, sua idade é ${idade}, você está em um nível de obesidade 3, se cuide mais!`
-window.document.getElementById('sweet').style.display = "block"
+window.document.getElementById('sweet').style.left = '36.5%'
 
 
-window.document.getElementById('alert').style.left = '36.5%'
+window.document.getElementById('alert').style.display = "block"
 
 window.document.getElementById('alert').style.color = "#ff0000"
 
@@ -229,6 +230,10 @@ n2.oninput = function(){
 	
 		
 })
+
+//botao top
+
+
 
 </script>
 
