@@ -6,7 +6,6 @@
     <link href="https://fontawesome.com/icons/ad?style=solid" rel="stylesheet">
     <script src="https://kit.fontawesome.com/e977a98377.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="estilo.css">
-    <link rel="icon" href="icone.png">
     <title>Índice de Massa Corporal</title>
 </head>
 <body>
@@ -97,12 +96,13 @@
         </div></a> 
         <p>Tecnologias Star's&copy;2021</p>
         <div class="icon-media">
-			<a href="https://www.facebook.com/" target="_black"><i class="fab fa-facebook" id="face"></i></a>
-			<a href="https://www.instagram.com/" target="_black"><i class="fab fa-instagram" id="insta"></i></a>
-			<a href="https://www.linkedin.com/in/renan-pereira-da-silva-50093a1b1/"><i class="fab fa-linkedin-in" id="link"></i></a>
-			<a href="https://www.github.com"><i class="fab fa-github" id="git"></i></a>
-			<a href="#"><i class="fab fa-youtube" id="tube"></i></a>
+			<a href="https://www.facebook.com/" target="_blanck"><i class="fab fa-facebook" id="face"></i></a>
+			<a href="https://www.instagram.com/" target="_blanck"><i class="fab fa-instagram" id="insta"></i></a>
+			<a href="https://www.linkedin.com/in/renan-pereira-da-silva-50093a1b1/" target="_black"><i class="fab fa-linkedin-in" id="link"></i></a>
+			<a href="https://www.github.com" target="_blanck"><i class="fab fa-github" id="git"></i></a>
+			<a href="https://youtube.com" target="_blanck"><i class="fab fa-youtube" id="tube"></i></a>
         </div>
+        <span style="font-size: 10pt; text-align: right;"><p>Versão: 1.7.0</p></span>
     </footer>
       <script>
 		  /* <!--Color in CSS-->
@@ -123,13 +123,15 @@ function calcular_valueof(){
 	var n2 = Number.parseFloat(window.document.getElementById('Altura').value)
 
 	var mostrar = n1/(n2**2)
+    var calculo = Number.parseFloat(mostrar.toFixed(2))
 
-	window.document.getElementById('Resultado').value = mostrar 
-	if(mostrar < 18.5){
+
+	window.document.getElementById('Resultado').value = 'O valor é ' + calculo
+	if(calculo < 18.5){
 
 window.document.getElementById('comentario').innerText = `${nome}, sua idade é ${idade}, mas você está abaixo do peso, se cuide!`
 
-window.document.getElementById('sweet').style.left = '36.5%'
+window.document.getElementById('sweet').style.left = '5%'
 
 window.document.getElementById('alert').style.display = "block"
 
@@ -138,8 +140,8 @@ window.document.getElementById('alert').style.color = "#ffff00"
 }
 
 if(mostrar >= 18.5 && mostrar <= 24.9){
-window.document.getElementById('comentario').innerText = `${nome}, sua idade é ${idade}, você está no peso normal, parabéns`
-window.document.getElementById('sweet').style.left = '36.5%'
+window.document.getElementById('comentario').innerText = `${nome}, você está no peso normal para a sua idade, parabéns e lembre-se de sempre se cuidar.`
+window.document.getElementById('sweet').style.left = '5%'
 
 window.document.getElementById('alert').style.display = "block"
 
@@ -149,7 +151,7 @@ window.document.getElementById('alert').style.color = "#0dff0d"
 
 if(mostrar >= 25.0 && mostrar <= 29.9){
 window.document.getElementById('comentario').innerText = `${nome}, sua idade é ${idade},você está em pré obesidade, deveria ser cuidar mais`
-window.document.getElementById('sweet').style.left = '36.5%'
+window.document.getElementById('sweet').style.left = '5%'
 
 window.document.getElementById('alert').style.display = "block"
 
@@ -159,7 +161,7 @@ window.document.getElementById('alert').style.color = "#ffff00"
 
 if(mostrar >=	30.0 && mostrar <= 34.9){
 window.document.getElementById('comentario').innerText = `${nome}, sua idade é ${idade}, você está em um nível de obesidade 1, se cuide mais!`
-window.document.getElementById('sweet').style.left = '36.5%'
+window.document.getElementById('sweet').style.left = '5%'
 
 window.document.getElementById('alert').style.display = "block"
 
@@ -168,7 +170,7 @@ window.document.getElementById('alert').style.color = "#ffa500"
 
 if(mostrar >= 35.0 && mostrar <= 39.9){
 window.document.getElementById('comentario').innerText = `${nome}, sua idade é ${idade}, você está em um nível de obesidade 2, se cuide mais!`
-window.document.getElementById('sweet').style.left = '36.5%'
+window.document.getElementById('sweet').style.left = '5%'
 
 window.document.getElementById('alert').style.display = "block"
 
@@ -177,7 +179,7 @@ window.document.getElementById('alert').style.color = "#ffa500"
 
 if(mostrar > 40.0){
 window.document.getElementById('comentario').innerText = `${nome}, sua idade é ${idade}, você está em um nível de obesidade 3, se cuide mais!`
-window.document.getElementById('sweet').style.left = '36.5%'
+window.document.getElementById('sweet').style.left = '5%'
 
 
 window.document.getElementById('alert').style.display = "block"
@@ -192,7 +194,7 @@ window.document.getElementById('alert').style.color = "#ff0000"
 
 
 function close_up(){
-	window.document.getElementById('sweet').style.left = '-50%'
+	window.document.getElementById('sweet').style.left = '-150%'
 }
 
 //validação
@@ -226,7 +228,7 @@ n2.oninput = function(){
 
 	window.addEventListener("scroll", function(){
 	var ca = window.document.querySelector('header')
-	ca.classList.toggle("stick", window.scrollY > 50)
+	ca.classList.toggle("stick", window.scrollY > 0)
 	
 		
 })
