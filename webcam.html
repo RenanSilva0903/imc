@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebCam</title>
+</head>
+<body>
+    <video autoplay></video>
+    <canvas></canvas>
+    <button>Tirar Foto</button>
+    <script>
+        var video = window.document.querySelector('video')
+
+        navigator.mediaDevices.getUserMedia({video:true})
+        .then(stream =>{
+            video.srcObject = stream
+            video.play
+        })
+        .catch(error =>{
+            // console.log(error)
+            window.alert("Permissão negada pelo o usuário!")
+        })
+        window.document.querySelector('button')
+        .addEventListener("click", () =>{ //array function ("click", function){}
+        var canvas = window.document.querySelector("canvas")
+        canvas.height = video.videoHeight
+        canvas.width = video.videoWidth
+        var context = canvas.getContext('2d')
+        context.drawImage(video, 0, 0)
+        var link = document.createElement('a')
+        link.download = 'image.png'
+        link.href = canvas.toDataURL()
+        link.textContent = 'Clque para baixa a imagem!'
+        window.document.body.appendChild(link)
+        })
+    </script>
+</body>
+</html>
